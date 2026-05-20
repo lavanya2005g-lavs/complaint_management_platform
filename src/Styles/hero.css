@@ -1,0 +1,153 @@
+.hero {
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0f2027, #1b3a4b, #2c5364);
+  color: white;
+}
+
+/* ===== Soft Glow Background Shapes ===== */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,245,160,0.25), transparent 70%);
+  top: -120px;
+  right: -120px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,217,255,0.2), transparent 70%);
+  bottom: -120px;
+  left: -120px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+/* ===== Hero Content ===== */
+
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+/* Gradient Title */
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00f5a0, #00d9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #d6fdf5;
+  line-height: 1.6;
+}
+/* ===== Buttons Container ===== */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Common Button Style */
+.hero-buttons button {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Raise Complaint (Strong Gradient) */
+.primary-btn {
+  background: linear-gradient(135deg, #00f5a0, #00d9ff);
+  color: #0f2027;
+  box-shadow: 0 6px 20px rgba(0, 245, 160, 0.4);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 245, 160, 0.6);
+}
+
+/* Track Complaint (Soft Gradient Version) */
+.secondary-btn {
+  background: linear-gradient(135deg, #00d9ff, #00f5a0);
+  color: #0f2027;
+  opacity: 0.9;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.5);
+}
+/* ===== Stats Section ===== */
+
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  width: 280px;
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card h2 {
+  font-size: 40px;
+  color: #00CED1;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 206, 209, 0.4);
+  border: 1px solid #00CED1;
+}
+
+
+
+

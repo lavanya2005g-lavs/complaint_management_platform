@@ -1,0 +1,70 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 70px;
+  background: linear-gradient(90deg, #0f2027, #203a43);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #00f5a0, #00d9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Nav container */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Nav buttons */
+.nav-links a {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+/* Active link style */
+.active {
+  background: linear-gradient(135deg, #00f5a0, #00d9ff);
+  color: #0f2027 !important;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(0, 245, 160, 0.4);
+}
+
+/* Smooth animation underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  bottom: 6px;
+  background: #00f5a0;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+  width: 60%;
+}
